@@ -2,8 +2,8 @@
 FROM python:3.6
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-WORKDIR /app_api
-COPY requirements.txt /app_api/
+WORKDIR /api_app
+COPY requirements.txt /api_app/
 RUN pip install -r requirements.txt
-COPY . /app_api/
+COPY . /api_app/
 CMD ["python", "app.py"]
