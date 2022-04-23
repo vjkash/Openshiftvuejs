@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
-FROM python:3
+FROM python:3.6
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app_api
 COPY requirements.txt /app_api/
 RUN pip install -r requirements.txt
 COPY . /app_api/
-test
+CMD ["python", "app.py"]
