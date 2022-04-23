@@ -2,7 +2,7 @@
 FROM python:3
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-WORKDIR /restapi
-COPY requirements.txt /restapi/
+WORKDIR /app_api
+COPY requirements.txt /app_api/
 RUN pip install -r requirements.txt
-COPY . /restapi/
+COPY . /app_api/
